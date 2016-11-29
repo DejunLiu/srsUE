@@ -4761,19 +4761,20 @@ LIBLTE_ERROR_ENUM liblte_rrc_pack_plmn_identity_ie(LIBLTE_RRC_PLMN_IDENTITY_STRU
             liblte_value_2_bits((plmn_id->mcc%10), ie_ptr, 4);
         }
 
-        if((plmn_id->mnc & 0xFF00) == 0xFF00)
-        {
+        
+        //if((plmn_id->mnc & 0xFF00) == 0xFF00)
+        //{
             mnc_size = 2;
             liblte_value_2_bits((mnc_size)-2, ie_ptr, 1);
             liblte_value_2_bits((plmn_id->mnc%100)/10, ie_ptr, 4);
             liblte_value_2_bits((plmn_id->mnc%10), ie_ptr, 4);
-        }else{
+        /*}else{
             mnc_size = 3;
             liblte_value_2_bits((mnc_size)-2, ie_ptr, 1);
             liblte_value_2_bits((plmn_id->mnc%1000)/100, ie_ptr, 4);
             liblte_value_2_bits((plmn_id->mnc%100)/10, ie_ptr, 4);
             liblte_value_2_bits((plmn_id->mnc%10), ie_ptr, 4);
-        }
+        }*/
 
         err = LIBLTE_SUCCESS;
     }
