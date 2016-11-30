@@ -2363,7 +2363,9 @@ static const uint8 liblte_rrc_delta_pucch_shift_num[LIBLTE_RRC_DELTA_PUCCH_SHIFT
 typedef enum{
     LIBLTE_RRC_HOPPING_MODE_INTER_SUBFRAME = 0,
     LIBLTE_RRC_HOPPING_MODE_INTRA_AND_INTER_SUBFRAME,
+    LIBLTE_RRC_HOOPPING_MODE_N_ITEMS,
 }LIBLTE_RRC_HOPPING_MODE_ENUM;
+static const char liblte_rrc_hopping_mode_text[LIBLTE_RRC_HOOPPING_MODE_N_ITEMS][20] = {"inter-subframe","intra-subframe"};
 typedef enum{
     LIBLTE_RRC_NUMBER_OF_RA_PREAMBLES_N4 = 0,
     LIBLTE_RRC_NUMBER_OF_RA_PREAMBLES_N8,
