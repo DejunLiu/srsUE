@@ -442,7 +442,7 @@ void phch_recv::run_thread()
             // Notify RRC of out-of-sync frame
             rrc->out_of_sync();
             worker->release();
-            worker_com->reset_ul();            
+            //worker_com->reset_ul();            
             phy_state = SYNCING;
           }
         } else {
