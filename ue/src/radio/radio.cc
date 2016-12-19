@@ -152,7 +152,7 @@ float radio::get_max_tx_power()
 
 float radio::get_rssi()
 {
-  return srslte_rf_get_rssi(&rf_device);  
+  //return srslte_rf_get_rssi(&rf_device);  
 }
 
 bool radio::has_rssi()
